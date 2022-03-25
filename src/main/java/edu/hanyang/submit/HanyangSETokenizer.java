@@ -2,7 +2,7 @@ package edu.hanyang.submit;
 
 import java.util.List;
 
-import edu.hanyang.indexer.Tokenizer;
+import io.github.hyerica_bdml.indexer.Tokenizer;
 
 
 public class HanyangSETokenizer implements Tokenizer {

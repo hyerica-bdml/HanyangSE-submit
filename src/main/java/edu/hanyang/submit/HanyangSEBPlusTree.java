@@ -2,7 +2,7 @@ package edu.hanyang.submit;
 
 import java.io.IOException;
 
-import edu.hanyang.indexer.BPlusTree;
+import io.github.hyerica_bdml.indexer.BPlusTree;
 
 
 public class HanyangSEBPlusTree implements BPlusTree {

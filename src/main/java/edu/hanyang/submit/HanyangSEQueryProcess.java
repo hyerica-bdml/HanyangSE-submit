@@ -2,12 +2,12 @@ package edu.hanyang.submit;
 
 import java.io.IOException;
 
-import edu.hanyang.indexer.DocumentCursor;
-import edu.hanyang.indexer.IntermediateList;
-import edu.hanyang.indexer.IntermediatePositionalList;
-import edu.hanyang.indexer.QueryPlanTree;
-import edu.hanyang.indexer.QueryProcess;
-import edu.hanyang.indexer.StatAPI;
+import io.github.hyerica_bdml.indexer.DocumentCursor;
+import io.github.hyerica_bdml.indexer.IntermediateList;
+import io.github.hyerica_bdml.indexer.IntermediatePositionalList;
+import io.github.hyerica_bdml.indexer.QueryPlanTree;
+import io.github.hyerica_bdml.indexer.QueryProcess;
+import io.github.hyerica_bdml.indexer.StatAPI;
 
 public class HanyangSEQueryProcess implements QueryProcess {
 
