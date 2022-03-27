@@ -1,7 +1,6 @@
 package io.github.hyerica_bdml.submit;
 
 import java.io.IOException;
-
 import io.github.hyerica_bdml.indexer.ExternalSort;
 
 
