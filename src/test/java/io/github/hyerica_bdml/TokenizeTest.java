@@ -1,7 +1,7 @@
-package edu.hanyang;
+package io.github.hyerica_bdml;
 
-import edu.hanyang.indexer.Tokenizer;
-import edu.hanyang.services.ServiceProvider;
+import io.github.hyerica_bdml.indexer.Tokenizer;
+import io.github.hyerica_bdml.submit.HanyangSETokenizer;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -47,7 +47,7 @@ public class TokenizeTest {
     public void TestTokenizer() {
         try {
             // external code binding
-            Tokenizer obj = ServiceProvider.getTokenizeService().createNewTokenizer();
+            Tokenizer obj = new HanyangSETokenizer();
             assertNotNull(obj);
 
             obj.setup();
