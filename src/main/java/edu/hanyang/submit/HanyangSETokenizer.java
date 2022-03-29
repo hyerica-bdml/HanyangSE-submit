@@ -1,4 +1,4 @@
-package io.github.hyerica_bdml.submit;
+package edu.hanyang.submit;
 
 import java.util.List;
 

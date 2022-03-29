@@ -1,7 +1,7 @@
-package io.github.hyerica_bdml;
+package edu.hanyang;
 
 import io.github.hyerica_bdml.indexer.Tokenizer;
-import io.github.hyerica_bdml.submit.HanyangSETokenizer;
+import edu.hanyang.submit.HanyangSETokenizer;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
