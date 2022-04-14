@@ -7,12 +7,13 @@ import io.github.hyerica_bdml.indexer.ExternalSort;
 public class HanyangSEExternalSort implements ExternalSort {
 
     /**
-     * External sorting
-     * @param infile    정렬되지 않은 데이터가 있는 파일
-     * @param outfile   정렬된 데이터가 쓰일 파일
-     * @param tmpdir    임시파일을 위한 디렉토리
-     * @param blocksize 허용된 메모리 블록 하나의 크기
-     * @param nblocks   허용된 메모리 블록 개수
+     * External sorting     
+     * @param infile    Input file
+     * @param outfile   Output file
+     * @param tmpdir    Temporary directory to be used for writing intermediate runs on 
+     * @param blocksize Available blocksize in the main memory of the current system
+     * @param nblocks   Available block numbers in the main memory of the current system
+     * @throws IOException  Exception while performing external sort
      */
     @Override
     public void sort(String infile, String outfile, String tmpdir, int blocksize, int nblocks) throws IOException {
