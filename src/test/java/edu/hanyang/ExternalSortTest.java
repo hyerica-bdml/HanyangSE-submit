@@ -8,6 +8,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.*;
+import java.lang.management.ManagementFactory;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -51,7 +52,8 @@ public class ExternalSortTest {
         sort.sort(INPUT_DATA_PATH, OUTPUT_DATA_PATH, TEMP_DIR_PATH, BLOCKSIZE, N_BLOCKS);
         long duration = System.currentTimeMillis() - currentTime;
         System.out.println("Duration: " + ((double) duration / 1000.0));
-
+        System.out.println("available memroy = " + 
+    	        ManagementFactory.getMemoryMXBean().getHeapMemoryUsage().getMax());
         try (FileInputStream fin = new FileInputStream(OUTPUT_DATA_PATH);
              BufferedInputStream bin = new BufferedInputStream(fin);
              DataInputStream in = new DataInputStream(bin)) {
@@ -60,6 +62,7 @@ public class ExternalSortTest {
             int previousDocId = -1;
             int previousPos = -1;
 
+            int cnt = 0;
             while (in.available() > 0) {
                 int termId = in.readInt();
                 int docId = in.readInt();
@@ -76,6 +79,8 @@ public class ExternalSortTest {
                 previousTermId = termId;
                 previousDocId = docId;
                 previousPos = pos;
+                
+                if (cnt++ >= 20000) break;
             }
         }
     }
