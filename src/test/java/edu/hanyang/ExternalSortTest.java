@@ -71,7 +71,7 @@ public class ExternalSortTest {
             int previousDocId = -1;
             int previousPos = -1;
 
-            int cnt = 0
+            int cnt = 0;
 
             while (in.available() > 0) {
                 int termId = in.readInt();

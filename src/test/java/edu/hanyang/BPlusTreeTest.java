@@ -75,6 +75,4 @@ public class BPlusTreeTest {
 		assertEquals(tree.search(557), 54);
 		tree.close();
 	}
-}public class BPlusTreeTest {
-    
 }
