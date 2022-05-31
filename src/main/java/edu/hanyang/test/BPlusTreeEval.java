@@ -16,7 +16,7 @@ public class BPlusTreeEval {
     private static final String TREE_FILE_PATH = "data/treedata.data";
     private static final String META_FILE_PATH = "data/metadata.data";
     private static final String DATA_PATH = "data/posting_list.data";
-    private static final int BLOCK_SIZE = 8192;
+    private static final int BLOCK_SIZE = 4096;
     private static final int N_BLOCKS = 1000;
 
     public static void prepare() throws IOException {
